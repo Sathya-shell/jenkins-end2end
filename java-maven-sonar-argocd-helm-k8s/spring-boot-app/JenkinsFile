@@ -4,10 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                sh ...
-                    sudo update
-                 ...
-                 
+                sh "echo passed"
                 //git branch: 'main', url: 'https://github.com/raveendragollaprolu/Jenkins-Mastering.git'
             }
         }
