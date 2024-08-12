@@ -1,0 +1,31 @@
+git fetch
+Purpose: Downloads objects and refs from another repository.
+Usage: git fetch <remote> <branch>
+Details:
+Fetches updates from the remote repository but does not merge them with the local branch.
+Updates the remote-tracking branches in your local repository (e.g., origin/main).
+Useful for checking what others have committed without affecting your local work.
+Can be followed by a manual merge or rebase.
+git pull
+Purpose: Fetches from and integrates with another repository or a local branch.
+Usage: git pull <remote> <branch>
+Details:
+Fetches updates from the remote repository and immediately tries to merge or rebase them into the current branch.
+Essentially a combination of git fetch followed by git merge (or git rebase if specified).
+It can lead to merge conflicts if there are changes in the remote branch that conflict with the local branch.
+
+Examples:
+Fetch Only:
+
+git fetch origin main
+This command updates your remote-tracking branch origin/main with the latest changes from the remote repository, but your local branch remains unchanged.
+
+Pull and Merge:
+
+git pull origin main
+This command fetches the latest changes from the remote repository and then merges them into your current branch.
+
+When to Use
+Use git fetch when you want to see what changes are available in the remote repository without affecting your local work. It gives you a chance to review changes before integrating them.
+Use git pull when you are ready to integrate changes from the remote repository into your current branch and you want to do it in one step. Be cautious of potential merge conflicts and ensure your local work is committed before pulling.
+Understanding the distinction between these commands helps in managing updates from remote repositories effectively while maintaining control over your local changes.
